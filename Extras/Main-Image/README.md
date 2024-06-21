@@ -1,4 +1,5 @@
 # How to apply.
+
 <p>This configuration will simulate an image behind all the browser.</p>
 
 <ul><li>Create this preference in about:config page.</li>  
@@ -11,7 +12,7 @@
 <li>Is compatible with one-line config, left-sidebar config and tree-tabs config.</li></ul></br>
 
 > <p><b>Notice:</b></br><ul><li>If you have active the bookmark-bar or the menu-bar, you will need to edit the line 89 from <code>chrome/components/ogx_root-personal.css</code> to set the correct number to align the image.</li></ul></p>
-</br>
+> </br>
 
 ## Preview
 

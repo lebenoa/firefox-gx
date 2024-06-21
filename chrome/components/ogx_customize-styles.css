@@ -4,9 +4,13 @@
 /*---------------------------Página -> "Personalizar Toolbar---------------------------*/
 
 /*"Color de fondo e íconos en "Perzonalizar barra de herramientas"*/
-#customization-container {color: var(--lwt-text-color) !important; background-color: var(--toolbar-bgcolor) !important;} 
+#customization-container {
+    color: var(--lwt-text-color) !important;
+    background-color: var(--toolbar-bgcolor) !important;
+}
 
-#customization-footer .footer-button:not(#customization-done-button,:hover,:active,[open]) {
+#customization-footer
+    .footer-button:not(#customization-done-button, :hover, :active, [open]) {
     appearance: none !important;
     background-color: var(--input-border-color) !important;
     border-color: var(--input-border-color) !important;
@@ -21,7 +25,7 @@
     padding: 2px 24px !important;
 }
 
-#customization-footer .footer-button:is([open]), 
+#customization-footer .footer-button:is([open]),
 #customization-done-button:is(:active, :hover):not([disabled]) {
     appearance: none !important;
     color: var(--lwt-tab-text) !important;
@@ -30,8 +34,16 @@
 }
 
 /* Menú de desbordamiento*/
-.panel-arrowcontent { border-radius: 0px !important; margin-right: 0px !important; padding-right: 0px !important; }
-#customization-panel-container{  padding-right: 2px !important; }
+.panel-arrowcontent {
+    border-radius: 0px !important;
+    margin-right: 0px !important;
+    padding-right: 0px !important;
+}
+#customization-panel-container {
+    padding-right: 2px !important;
+}
 #customization-panelWrapper > .panel-arrowbox > .panel-arrow[side="top"] {
-    margin-inline-end: calc(var(--panel-arrow-offset) - var(--customization-panel-padding) + 6px) !important; 
+    margin-inline-end: calc(
+        var(--panel-arrow-offset) - var(--customization-panel-padding) + 6px
+    ) !important;
 }

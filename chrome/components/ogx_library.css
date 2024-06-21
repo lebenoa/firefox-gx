@@ -88,7 +88,7 @@
     @media (-moz-platform: linux){
     #editBMPanel_namePicker , #editBMPanel_locationField,
     #editBMPanel_tagsField, #editBMPanel_keywordField{
-        border-radius: 4px !important;
+        border-radius: 0px !important;
         }
     #editBMPanel_namePicker:focus-visible , #editBMPanel_locationField:focus-visible,
     #editBMPanel_tagsField:focus-visible, #editBMPanel_keywordField:focus-visible{
@@ -99,7 +99,7 @@
     #editBMPanel_tagsSelectorExpander{
         appearance: none !important;
         padding-inline: 14px !important;
-        border-radius: 4px !important;
+        border-radius: 0px !important;
         outline: 1px solid  color-mix(in srgb, var(--contrast-color) 30%, transparent) !important;
         outline-offset: -1px !important;
         background: var(--organizer-pane-background) !important;
@@ -148,7 +148,7 @@
         appearance: none !important;
         outline-color: var(--general-color) !important;
         outline-offset: -1px !important;
-        border-radius: 3px !important;
+        border-radius: 0px !important;
     }
     /*Color "selected" de items*/
     #places treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected), #placesList>treechildren::-moz-tree-row(selected) {

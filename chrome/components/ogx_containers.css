@@ -40,13 +40,25 @@ tab[muted] .tab-content .tab-label {
 /* Color contenedor default */
 
 .identity-color-toolbar {
-    --identity-tab-color: color-mix(in srgb, #0c86ee 80%, var(--lwt-tab-text)) !important;
-    --identity-icon-color: color-mix(in srgb, #0c86ee 80%, var(--lwt-tab-text)) !important;
+    --identity-tab-color: color-mix(
+        in srgb,
+        #0c86ee 80%,
+        var(--lwt-tab-text)
+    ) !important;
+    --identity-icon-color: color-mix(
+        in srgb,
+        #0c86ee 80%,
+        var(--lwt-tab-text)
+    ) !important;
 }
 
 .identity-color-toolbar:-moz-window-inactive {
     --identity-tab-color: #0c86ee !important;
-    --identity-icon-color: color-mix(in srgb, #0c86ee 60%, transparent) !important;
+    --identity-icon-color: color-mix(
+        in srgb,
+        #0c86ee 60%,
+        transparent
+    ) !important;
 }
 
 /* Contenedor rojo nuevo color */

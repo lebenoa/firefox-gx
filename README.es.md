@@ -1,4 +1,5 @@
 # Opera-GX Theme for Firefox Css
+
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Godiesc/firefox-gx/blob/main/README.md)
 [![fr](https://img.shields.io/badge/lang-fr-blue.svg)](https://github.com/Godiesc/firefox-gx/blob/main/README.fr.md)
 
@@ -9,6 +10,7 @@
 # ¿Cómo instalar?
 
 <b>Pasos para configurar el tema:</b>
+
 <ol>
    <li>Descarga el tema desde la sección <b> << Releases >> </b> en el lado derecho de esta página.</code></li>
    <li>Descomprime el archivo y copia la carpeta 👉<code>chrome</code>👈 y el archivo 👉<code>user.js</code>👈 dentro de la carpeta de perfil de tu usuario de firefox.</li>
@@ -22,6 +24,7 @@
 > <p>Notice:</p> ⚠ El último código actualizado en el repositorio (code > download zip) puede funcionar bien sólo en versiones beta o nightly.
 
 # Temas
+
 <ul><li>Temas Principales <a href= "https://addons.mozilla.org/es/firefox/addon/beautiful-opera-gx-fucsia/">🔴Fuchsia</a> <a href= "https://addons.mozilla.org/es/firefox/addon/beautiful-opera-gx-blue/">🔵Blue</a> <a href= "https://addons.mozilla.org/es/firefox/addon/beautiful-gx-green/" >🟢Green</a><a href= "https://addons.mozilla.org/es/firefox/addon/beautiful-poison/" >🖍 Poison</a> <a href= "https://addons.mozilla.org/es/firefox/addon/beautiful-swamp-in-autumn/" >🎑 Swamp</a><a href= "https://addons.mozilla.org/es/firefox/addon/beautiful-red-blur/">🌈Red-Blur</a><a href= "https://addons.mozilla.org/es/firefox/addon/beautiful-purple-sky/"> 🌆 Purple-Sky</a> </li>
 
 <li> Otros Colores <a href= "https://addons.mozilla.org/es/firefox/addon/opera-gx-witchcraft-purple/">💜Purple</a> <a href= "https://addons.mozilla.org/es/firefox/addon/opera-gx-electric-aquamarine/">💚Aquamarine</a> <a href= "https://addons.mozilla.org/es/firefox/addon/opera-gx-ember-orange/">🦧Orange</a> <a href= "https://addons.mozilla.org/es/firefox/addon/opera-gx-frozen-cyan/">💠Cyan</a> <a href= "https://addons.mozilla.org/es/firefox/addon/opera-gx-level-up-green/">🍏GreenLight</a> <a href= "https://addons.mozilla.org/es/firefox/addon/opera-gx-stamina-yellow/">💛Yellow</a> <a href= "https://addons.mozilla.org/es/firefox/addon/opera-gx-wizard-grey/"> 🗻Gray</a></li>
@@ -29,8 +32,8 @@
 
 <p>Puedes usar la extensión <a href="https://addons.mozilla.org/es/firefox/addon/gx-theme-styles">"GX Theme Styles"</a> para cambiar facilmente los temas y colores, essta extensión funciona para temas sólidos y para usuarios que usan la configuración "Main-image". Para cambiar la imagen de la página Nueva Pestaña y su color de acento debes hacerlo manualmente como de costumbre. Esta extensión fue creado por mi.</p>
 
-![imagen](https://github.com/Godiesc/firefox-gx/assets/22057609/c584a7ea-2410-4504-9de4-c00046da4b02) 
-   
+![imagen](https://github.com/Godiesc/firefox-gx/assets/22057609/c584a7ea-2410-4504-9de4-c00046da4b02)
+
 <p><b>Aquí un <a href="https://imgur.com/a/0ZASdRb">"Video Explicativo"</a> de cómo cambiar al modo claro y oscuro su contenido web.</b></p>
 
 <hr size=1px;border-style=dotted;color="#50505050" />
@@ -41,6 +44,7 @@
 <li> Ve a la pestaña "Advanced colors" y cambia el color en "icons attention", este color cambiará el color de acento del tema.</li></ol>
 
 # Extras
+
 <p>Dentro de la carpeta "Extras" encontrarás las siguientes características adicionales:</p>
 <ul><li><a href="https://github.com/Godiesc/firefox-gx/tree/main/Extras/OneLine"><b>OneLine</b></a> - La barra de pestañas se muestra al lado de la barra de navegación.</li>
 <li><a href="https://github.com/Godiesc/firefox-gx/tree/main/Extras/Tab-Shapes"><b>Tab Shapes</b></a> - Da a las pestañas otro estilo.</li>
@@ -55,6 +59,7 @@
 # Personalizar
 
 <b><i>Personalizaciones Varias</i></b>
+
 <ul>
 <li><p>El archivo <code>chrome/components/ogx_root-personal.css</code> contiene variables útiles para cambiar lo siguiente:</p>
 <ul>
@@ -67,11 +72,13 @@
 <p>Cada variable tiene una descripción a su derecha para que puedas editar sin romper el archivo.</p></li></ul>
 
 <b><i>Fondo Nueva Pestaña</i></b>
+
 <ul>
    <li><p>(Opción 1) En el directorio: <code>chrome/newtab</code> hay varios fondos de pantalla, las imágenes que el tema va a seleccionar por defecto son: <b><i>wallpaper-light.png</i></b> y <b><i>wallpaper-dark.png</i></b>, puedes renombrar las imágenes que quieres con esos nombres y el tema los seleccionará, puedes añadir tus propias imágenes. Si no quieres que se muestre ninguna imagen puedes eliminar sin problemas esos archivos. Puedes encontrar más imágenes en : <a href="https://imgur.com/a/j78IhJN"><b>Esta Galería</b></a>. <b>Es necesario reiniciar el navegador para ver los resultados. </b></p></li>
 <li><p>(Opción 2) Edita el archivo <code>chrome/components/ogx_root-personal.css</code>, las lineas : <code>19</code> y <code>24</code>.<p></li></ul></br>
 
 <b><i>Color de Acento</i></b>
+
 <ul>
 <li><p>Debes cambiar manualmente el color de acento para userContent.css (nueva pestaña, página de Configuración y página de Complementos y temas). El archivo <code>chrome/components/ogx_root-personal.css</code> tiene la variable: " --general-color " para definir el color, puedes elegir el que gustes. 💙💚💜🤎💛🧡❤ <b>Reinicia el navegador para ver los cambios. </b></p></li></ul>
 
@@ -87,12 +94,14 @@
 </ul>
 
 # Problemas Conocidos
+
 <ul>
 <li>En temas con imágenes se mostrará un mal fondo en la pestaña que estes moviendo.</li>
 <li>No es compatible con lenguajes RTL(right-to-left).</li>
 </ul>
 
 # Tema relacionado
+
 Disponible [Firefox-ONE](https://github.com/Godiesc/firefox-one)
 
 ![SplashPromocionalFirefoxONE](https://github.com/Godiesc/firefox-one/assets/22057609/453c2917-8cee-4424-b550-e4e38f492c84)

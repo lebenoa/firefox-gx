@@ -1,36 +1,44 @@
 :root {
     --tab-separator: transparent;
     --tablist-separator: #cccccc;
-    --overflow-indicator-border: #333333; }
+    --overflow-indicator-border: #333333;
+}
 
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #1c1b22;
         /*--lwt-frame-personal: #101019;*/
-        --icons: rgb(251,251,254);
+        --icons: rgb(251, 251, 254);
         --tab-separator: transparent;
-        --tab-active-background: rgb(66,65,77);
-        --tab-active-text: rgb(251,251,254);
+        --tab-active-background: rgb(66, 65, 77);
+        --tab-active-text: rgb(251, 251, 254);
         --tab-text: #fbfbfe;
-        --toolbar-background: rgb(43,42,51);
+        --toolbar-background: rgb(43, 42, 51);
         --toolbar-text: rgb(251, 251, 254);
-        --input-background: rgb(28,27,34);
+        --input-background: rgb(28, 27, 34);
         --input-border: transparent;
-        --input-background-focus: rgb(66,65,77);
-        --input-selected-text: rgb(251,251,254);
-        --input-text: rgb(251,251,254);
-        --input-text-focus: rgb(251,251,254);
-        --identity-color-toolbar: rgb(251,251,254);
+        --input-background-focus: rgb(66, 65, 77);
+        --input-selected-text: rgb(251, 251, 254);
+        --input-text: rgb(251, 251, 254);
+        --input-text-focus: rgb(251, 251, 254);
+        --identity-color-toolbar: rgb(251, 251, 254);
         --tablist-separator: #333333;
-        --overflow-indicator-border: #cccccc; }}
+        --overflow-indicator-border: #cccccc;
+    }
+}
 
 @media (prefers-color-scheme: light) {
-    :root { --lwt-frame-personal:  #e9e6ef;  }}
+    :root {
+        --lwt-frame-personal: #e9e6ef;
+    }
+}
 
 /* fix autoscrolling bug when middle clicking */
-:root, body {
+:root,
+body {
     overflow: hidden;
-    background-color: var(--lwt-frame-personal, var(--background)); }
+    background-color: var(--lwt-frame-personal, var(--background));
+}
 
 /* Move topmenu to bottom */
 #topmenu {
@@ -42,7 +50,9 @@
     margin-left: 6px;
 }
 
-#settings { margin-right: 2px; }
+#settings {
+    margin-right: 2px;
+}
 
 /* Hide filterbox & settings icon */
 #filterbox-icon,
@@ -67,7 +77,8 @@
     content: "";
     margin: 2px 1px -2px 1px;
     border: 1px solid var(--tab-loading-fill);
-    border-bottom-width: 0px; }
+    border-bottom-width: 0px;
+}
 
 #newtab {
     flex-grow: 1;
@@ -75,55 +86,93 @@
     margin-left: 2px;
     padding-left: 9px;
     min-width: 36px;
-    width: 100%; }
+    width: 100%;
+}
 
 /* middle click newtab workaround */
 
 /* allows the #spacer element to take up more space */
-   #spacer { min-height: 100vh; }
+#spacer {
+    min-height: 100vh;
+}
 
 /* moves the new tab button to the original position */
-   #tablist-wrapper { margin-bottom: -100vh; }
+#tablist-wrapper {
+    margin-bottom: -100vh;
+}
 
 /* moves the new tab button separator to the original position */
-   #tablist-wrapper::after { transform: translateY(-100vh); }
+#tablist-wrapper::after {
+    transform: translateY(-100vh);
+}
 
 .tab,
 .tab.active {
-background-color: var(identity-color, var(--tab-loading-fill));
+    background-color: var(identity-color, var(--tab-loading-fill));
     border-bottom: none !important;
     margin: 0px;
 }
 
 #pinnedtablist:not(.compact) .tab:before,
-   #tablist .tab:before {
-     content: "";
-     position: absolute;
-     top: 0;
-     bottom: 0;
-     left: -6px;
-     width: 6px; }
+#tablist .tab:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -6px;
+    width: 6px;
+}
 
-#pinnedtablist.compact .tab{ margin-bottom: 2px;}
+#pinnedtablist.compact .tab {
+    margin-bottom: 2px;
+}
 
 /* Change the line of selected tab to container color too */
-#pinnedtablist:not(.compact) .tab.active, #tablist .tab.active {
-    background-color: color-mix(in srgb,  var(--identity-color, var(--tab-loading-fill, var(--general-color))) 22%, transparent);
-    box-shadow: inset 3px 0 0 0px color-mix(in srgb, var(--identity-color,var(--tab-loading-fill)) 100%, transparent);
+#pinnedtablist:not(.compact) .tab.active,
+#tablist .tab.active {
+    background-color: color-mix(
+        in srgb,
+        var(--identity-color, var(--tab-loading-fill, var(--general-color))) 22%,
+        transparent
+    );
+    box-shadow: inset 3px 0 0 0px
+        color-mix(
+            in srgb,
+            var(--identity-color, var(--tab-loading-fill)) 100%,
+            transparent
+        );
     border-radius: 4px;
 }
 /* Change the line of selected tab to container color too in pinned tabs */
 #pinnedtablist:is(.compact) .tab.active {
-    background-color: color-mix(in srgb,  var(--identity-color, var(--tab-loading-fill, var(--general-color))) 22%, transparent);
-    box-shadow: inset 0 3px 0 0px color-mix(in srgb, var(--identity-color,var(--tab-loading-fill)) 100%, transparent);
+    background-color: color-mix(
+        in srgb,
+        var(--identity-color, var(--tab-loading-fill, var(--general-color))) 22%,
+        transparent
+    );
+    box-shadow: inset 0 3px 0 0px
+        color-mix(
+            in srgb,
+            var(--identity-color, var(--tab-loading-fill)) 100%,
+            transparent
+        );
     border-radius: 4px;
     border-radius: 4px;
 }
 #pinnedtablist.compact:not(:empty) {
-    border-color: color-mix(in srgb, var(--identity-color,var(--tab-loading-fill)) 30%, transparent); margin-bottom: 2px;
+    border-color: color-mix(
+        in srgb,
+        var(--identity-color, var(--tab-loading-fill)) 30%,
+        transparent
+    );
+    margin-bottom: 2px;
 }
 .tab:not(.active):hover {
---prueba-variable: color-mix(in srgb,  var(--background) 94%, var(--input-text));
+    --prueba-variable: color-mix(
+        in srgb,
+        var(--background) 94%,
+        var(--input-text)
+    );
     background-color: var(--prueba-variable);
     border-radius: 4px;
 }
@@ -169,18 +218,20 @@ background-color: var(identity-color, var(--tab-loading-fill));
     left: -6px;
     bottom: 6px;
     width: 3px;
-    border-radius:0 5px 5px 0;
+    border-radius: 0 5px 5px 0;
     background: var(--identity-color);
-    transition: inset .1s;
+    transition: inset 0.1s;
 }
 #tablist .tab.active[data-identity-color] .tab-context::before,
-#pinnedtablist:not(.compact) .tab.active[data-identity-color] .tab-context::before {
+#pinnedtablist:not(.compact)
+    .tab.active[data-identity-color]
+    .tab-context::before {
     top: 1px;
     bottom: 1px;
 }
 
 /* center favicons within the tab */
-#tablist-wrapper.shrinked>:not(#pinnedtablist.compact) .tab-meta-image {
+#tablist-wrapper.shrinked > :not(#pinnedtablist.compact) .tab-meta-image {
     margin-left: 6px !important;
 }
 /* hide certain items when collapsed */
@@ -191,8 +242,10 @@ background-color: var(identity-color, var(--tab-loading-fill));
         visibility: collapse !important;
     }
 
-/* hide scrollbar when sidebar is collapsed */
-#tablist {  scrollbar-width: none; }
+    /* hide scrollbar when sidebar is collapsed */
+    #tablist {
+        scrollbar-width: none;
+    }
 }
 
 @media (max-width: 48px) {
@@ -200,7 +253,7 @@ background-color: var(identity-color, var(--tab-loading-fill));
     #tablist-wrapper .tab-title-wrapper,
     #newtab::after,
     #settings {
-    visibility: hidden !important;
+        visibility: hidden !important;
     }
 }
 /* Use mask for overflow instead of shadows */
@@ -211,9 +264,14 @@ background-color: var(identity-color, var(--tab-loading-fill));
     mask: linear-gradient(black calc(100% - 40px), transparent);
 }
 .can-scroll-bottom.can-scroll-top #tablist {
-    mask: linear-gradient(transparent, black 40px calc(100% - 40px), transparent);
+    mask: linear-gradient(
+        transparent,
+        black 40px calc(100% - 40px),
+        transparent
+    );
 }
-#topshadow, #bottomshadow {
+#topshadow,
+#bottomshadow {
     display: none;
 }
 /* Prevent showing scrollbar when adding/removing tabs */
@@ -227,7 +285,8 @@ background-color: var(identity-color, var(--tab-loading-fill));
     gap: 2px;
     background-color: var(--lwt-frame-personal);
 }
-#pinnedtablist.compact:not(:hover):not(:focus-within) { /* Prevent scrollbar from showing when transitioning */
+#pinnedtablist.compact:not(:hover):not(:focus-within) {
+    /* Prevent scrollbar from showing when transitioning */
     scrollbar-width: none;
 }
 #pinnedtablist.compact .tab {
@@ -235,31 +294,37 @@ background-color: var(identity-color, var(--tab-loading-fill));
 }
 @media (max-width: 48px) {
     #pinnedtablist.compact {
-        overflow-x: clip /* Clip always makes it reset scroll position */
+        overflow-x: clip; /* Clip always makes it reset scroll position */
     }
-#pinnedtablist.compact .tab.active {
-        order: -1
+    #pinnedtablist.compact .tab.active {
+        order: -1;
     }
 }
 /* Change the radius of the close button */
-.tab-close{ border-radius: 0 4px 4px 0; }
+.tab-close {
+    border-radius: 0 4px 4px 0;
+}
 
 /* Sound icon */
 .tab.audible:not(.muted) .tab-icon-overlay-audible {
-    background-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-small.svg") ;
-    background-color: var(--background) ;
-    -moz-context-properties: fill ;
-    fill: var(--tab-loading-fill, var(--general-color)) ;
+    background-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-small.svg");
+    background-color: var(--background);
+    -moz-context-properties: fill;
+    fill: var(--tab-loading-fill, var(--general-color));
     box-shadow: none;
-    border-width: 0px; }
+    border-width: 0px;
+}
 
-.tab.muted .tab-icon-overlay-muted { opacity: 0; }
+.tab.muted .tab-icon-overlay-muted {
+    opacity: 0;
+}
 
 .tab.muted:hover .tab-icon-overlay-muted {
     opacity: 1;
     background-image: url("https://raw.githubusercontent.com/Godiesc/opera-gx/3e95a8141d23f9870d1c40a661a0460ed53c064f/chrome/images/paused.svg");
-    background-color: var(--background) ;
-    -moz-context-properties: fill ;
-    fill: var(--tab-loading-fill, var(--general-color)) ;
+    background-color: var(--background);
+    -moz-context-properties: fill;
+    fill: var(--tab-loading-fill, var(--general-color));
     box-shadow: none;
-    border-width: 0px; }
+    border-width: 0px;
+}
