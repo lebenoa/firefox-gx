@@ -1,4 +1,5 @@
 # Thème CSS Opera-GX pour Firefox
+
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Godiesc/firefox-gx/blob/main/README.md)
 [![es](https://img.shields.io/badge/lang-es-yellow.svg)](https://github.com/Godiesc/firefox-gx/blob/main/README.es.md)
 
@@ -9,6 +10,7 @@
 # Comment installer ?
 
 <b>Étapes de la configuration :</b>
+
 <ol>
    <li>Téléchargez le thème à partir de la section <b> << Releases >> </b>, dans la partie droite de cette page. </code></li> 
    <li>Décompressez l'archive zip et copiez le dossier 👉<code>chrome</code>👈 et le fichier 👉<code>user.js</code>👈 dans votre dossier "profile" </li>
@@ -22,6 +24,7 @@
 > <p>Note:<ul><li>⚠ Le dernier code mis à jour dans le dépôt (code > download zip) peut ne fonctionner que sur les versions beta ou nightly.</li></ul></p>
 
 # Thèmes
+
 <ul><li>Thèmes principaux : <a href= "https://addons.mozilla.org/es/firefox/addon/beautiful-opera-gx-fucsia/">🔴Fuchsia</a> <a href= "https://addons.mozilla.org/es/firefox/addon/beautiful-opera-gx-blue/">🔵Blue</a> <a href= "https://addons.mozilla.org/es/firefox/addon/beautiful-gx-green/" >🟢Green</a><a href= "https://addons.mozilla.org/es/firefox/addon/beautiful-poison/" >🖍 Poison</a> <a href= "https://addons.mozilla.org/es/firefox/addon/beautiful-swamp-in-autumn/" >🎑 Swamp</a><a href= "https://addons.mozilla.org/es/firefox/addon/beautiful-red-blur/">🌈Red-Blur</a><a href= "https://addons.mozilla.org/es/firefox/addon/beautiful-purple-sky/"> 🌆 Purple-Sky</a> </li></ul>
    
 <p><b>Voici une <a href="https://imgur.com/a/0ZASdRb">"explication vidéo"</a> sur comment alterner entre le mode sombre et clair.</b></p>
@@ -34,6 +37,7 @@
 <li> Allez dans l'onglet "Advanced colors" et changez la couleur dans "icons attention", cette couleur définira la couleur d'accentuation du thème.</li></ol>
 
 # Extras
+
 <p>Dans le dossier "Extras" vous trouverez les options suivantes.</p>
 <ul><li><a href="https://github.com/Godiesc/firefox-gx/tree/main/Extras/OneLine"><b>OneLine</b></a> - Les outils et extensions seront au même niveau que la barre de navigation.</li>
 <li><a href="https://github.com/Godiesc/firefox-gx/tree/main/Extras/Tab-Shapes"><b>Tab Shapes</b></a> - Donne un autre style aux onglets.</li>
@@ -48,6 +52,7 @@
 # Customisation
 
 <b><i>Différentes customisations</i></b>
+
 <ul>
 <li><p>Le fichier <code>chrome/components/ogx_root-personal.css</code> contient des variables très utiles et faciles à utiliser, de sorte qu'il est plus facile de modifier le navigateur :</p>
 <ul>
@@ -61,11 +66,13 @@
 <p>Chaque variable a une description à sa droite, donc vous saurez ce que vous customiserez sans casser le fichier, penser à sauvegarder une copie de l'original, on sait jamais.</p></li></ul>
 
 <b><i>Fond d'écran de la page d'accueil</i></b>
+
 <ul>
    <li><p>(Option 1) Dans le dossier : <code>chrome/newtab</code> se trouvent quelques fonds d'écran, les images que le thème sélectionnera par défaut sont : <b><i>wallpaper-light.png</i></b> et <b><i>wallpaper-dark.png</i></b>, vous pouvez renommer les images que vous voulez ajouter avec le même nom et le thème les sélectionnera si vous ne voulez pas de fond d'écran créez un dossier dans l'emplacement et déplacez les fonds d'écran. Vous pouvez trouver d'autres images dans <a href="https://imgur.com/a/j78IhJN"><b>Cette Galerie</b></a>. <b>Il est requis de redémarrer le navigateur après un changement de fond d'écran.</b></p></li>
 <li><p>(Option 2 <b>Recommandée</b>) Modifier le nom du fond d'écran dans le fichier <code>chrome/components/ogx_root-personal.css</code> à la ligne : <code>19</code> et <code>24</code>.<p></li></ul></br>
 
 <b><i>Couleur d'accentuation</i></b>
+
 <ul>
 <li><p>Il est possible de la customiser manuellement avec userContent.css (page d'accueil, préférences et add-ons (greffons)). Le fichier <code>chrome/components/ogx_root-personal.css</code> a la variable : " --general-color " pour régler la couleur, vous pouvez choisir la couleur que vous souhaitez. 💙💚💜🤎💛🧡❤ <b>Il faudra redémarrer le navigateur pour que les modifications prennent effet. </b></p></li></ul>
 
@@ -81,6 +88,7 @@
 </ul>
 
 # Problèmes connus
+
 <ul>
 <li>Quand vous utilisez plus qu'une seule image, le thème affichera le mauvais fond d'écran dans l'onglet sélectionné, par exemple le thème alpenglow de Firefox.</li>
 <li>Dans les thèmes avec des images, le fait de déplacer un onglet va afficher le mauvais fond.</li>
@@ -88,6 +96,7 @@
 </ul>
 
 # Sujets liés
+
 Disponible [Firefox-ONE](https://github.com/Godiesc/firefox-one)
 
 ![SplashPromocionalFirefoxONE](https://github.com/Godiesc/firefox-one/assets/22057609/453c2917-8cee-4424-b550-e4e38f492c84)
@@ -95,4 +104,3 @@ Disponible [Firefox-ONE](https://github.com/Godiesc/firefox-one)
 # Exemple pour trouver about:support
 
 ![120349392-b372f980-c2c3-11eb-904d-b088168fd849](https://user-images.githubusercontent.com/22057609/156908375-824f8679-56a5-4d09-a86f-353a7f61135e.png)
-

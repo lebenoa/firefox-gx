@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+    border-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    scrollbar-width: thin !important;
+}
+
+#urlbar .search-one-offs:not([hidden]) {
+    display: none !important;
+    /* opacity: 0 !important; */
+}
+
+*[mask] {
+    mask: none !important;
+}

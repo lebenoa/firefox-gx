@@ -1,4 +1,5 @@
 # Steps to apply this config
+
 <ul><li>Create this preference in <b>about:config</b> page.</li>
 <table><tr>
     <td width="320px">firefoxgx.tab-shapes</td>

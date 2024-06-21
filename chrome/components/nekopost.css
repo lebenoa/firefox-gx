@@ -1,0 +1,23 @@
+@-moz-document url-prefix("https://www.nekopost.net")
+{
+    div[role="contentinfo"] > div.container > div > div.mb-10:not(:last-child) {
+        margin-bottom: 0px !important;
+    }
+
+    div[role="contentinfo"]
+        > div.container
+        > div
+        > div:not(:first-child)
+        > div.text-2xl {
+        display: none;
+    }
+
+    div[role="contentinfo"]
+        > div.container
+        > div
+        > div:not(:first-child)
+        > div
+        > img {
+        border: none !important;
+    }
+}

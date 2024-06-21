@@ -10,7 +10,10 @@
 /* Color bolita de -cargando página- */
 
 #tabbrowser-tabs {
-    --tab-loading-fill: var(--identity-tab-color, var(--general-color)) !important;
+    --tab-loading-fill: var(
+        --identity-tab-color,
+        var(--general-color)
+    ) !important;
 }
 
 /* Espacio top en ventana no maximizada */
@@ -25,25 +28,39 @@
 
 /* ------------------------------------- Pestaña activa ------------------------------------- */
 
-:root[tabsintitlebar] #titlebar:-moz-window-inactive { opacity: 1 !important; }
+:root[tabsintitlebar] #titlebar:-moz-window-inactive {
+    opacity: 1 !important;
+}
 
 /* Necesario  para que la primera pestaña :selected no quede bajo left-sidebar */
 
-.tabbrowser-tab[selected] { z-index: 1 !important; }
-
-#titlebar{
-  will-change: unset !important;
-  transition: none !important;
-  opacity: 1 !important;
+.tabbrowser-tab[selected] {
+    z-index: 1 !important;
 }
 
-.tab-background, .tab-stack::before{ clip-path: polygon(5px 0%, 200% 0%, 0% 200%, 0% 5px); }
+#titlebar {
+    will-change: unset !important;
+    transition: none !important;
+    opacity: 1 !important;
+}
 
-.tab-background{ margin-block-start: 1px !important; margin-inline: 1px !important; border-radius: 0px 2px 0px 0px !important;}
+.tab-background,
+.tab-stack::before {
+    clip-path: polygon(5px 0%, 200% 0%, 0% 200%, 0% 5px);
+}
 
-.tab-background:is([selected]){
-    background-image: linear-gradient(var(--toolbar-bgcolor, transparent), var(--toolbar-bgcolor, transparent)), 
-                      var(--lwt-additional-images,none), var(--lwt-header-image, none) !important;
+.tab-background {
+    margin-block-start: 1px !important;
+    margin-inline: 1px !important;
+    border-radius: 0px 2px 0px 0px !important;
+}
+
+.tab-background:is([selected]) {
+    background-image: linear-gradient(
+            var(--toolbar-bgcolor, transparent),
+            var(--toolbar-bgcolor, transparent)
+        ),
+        var(--lwt-additional-images, none), var(--lwt-header-image, none) !important;
     background-position: 0 0, var(--lwt-background-alignment), right top !important;
     background-repeat: repeat-x, var(--lwt-background-tiling), no-repeat !important;
     background-size: auto 100%, var(--lwt-background-size, auto auto), auto auto !important;
@@ -51,45 +68,60 @@
     background-color: transparent !important;
     box-shadow: none !important;
     background-clip: padding-box;
-    border-radius: 0px 2px 0px 0px !important;
+    border-radius: 0px !important;
 }
 
-.tabbrowser-tab[selected] > .tab-stack::before{
+.tabbrowser-tab[selected] > .tab-stack::before {
     content: "";
     display: flex;
     min-height: inherit;
     border-radius: var(--tab-border-radius);
     grid-area: 1/1;
     margin-block: var(--tab-block-margin);
-  /* Edit gradient colors here */
+    /* Edit gradient colors here */
     background: var(--general-color) !important;
-    border-radius: 0px 2px 0px 0px !important;
+    border-radius: 0px !important;
 }
 
 /* Sombra label de pestañas - quita sombra bajo todas las pestañas */
 
-.tab-label { text-shadow: none !important; }
+.tab-label {
+    text-shadow: none !important;
+}
 
-#TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon, 
-#tabbrowser-tabs:not([noshadowfortests]) .tab-background:is([selected], [multiselected]) {
-    box-shadow: none !important; }
+#TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon,
+#tabbrowser-tabs:not([noshadowfortests])
+    .tab-background:is([selected], [multiselected]) {
+    box-shadow: none !important;
+}
 
-#TabsToolbar{ --tabs-navbar-shadow-size: 0px !important; }
+#TabsToolbar {
+    --tabs-navbar-shadow-size: 0px !important;
+}
 
 /* Alinea los botones de la tabs-bar */
 
-#TabsToolbar .toolbarbutton-1 { margin: 0 0 1px !important; }
+#TabsToolbar .toolbarbutton-1 {
+    margin: 0 0 1px !important;
+}
 
 /* Indispensable para mantener alineado el contenido de las pestañas */
 
-.tab-content { margin-bottom: 1px !important; }
+.tab-content {
+    margin-bottom: 1px !important;
+}
 
 /* ------------------------------------- Gradiente bajo pestañas ------------------------------------- */
 
-#nav-bar:not([tabs-hidden="true"]) { box-shadow: none !important; border-top: none !important; }
+#nav-bar:not([tabs-hidden="true"]) {
+    box-shadow: none !important;
+    border-top: none !important;
+}
 
-#TabsToolbar::before{
-    content: "" !important; position: absolute !important; align-self: end !important;
+#TabsToolbar::before {
+    content: "" !important;
+    position: absolute !important;
+    align-self: end !important;
     height: 1px !important;
     min-height: 1px !important;
     max-height: 1px !important;
@@ -101,33 +133,38 @@
 
 /* Color :hover de las pestañas no seleccionadas */
 
-@media not (-moz-bool-pref:"firefoxgx.tab-shapes") {
-
-    .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected], [multiselected]) {
+@media not (-moz-bool-pref: "firefoxgx.tab-shapes") {
+    .tabbrowser-tab:hover
+        > .tab-stack
+        > .tab-background:not([selected], [multiselected]) {
         background-color: transparent !important;
     }
-    
-        /* used for smooth transition */
-    .tabbrowser-tab:not(:hover) > .tab-stack:not([selected],[multiselected]) {
-        clip-path: polygon(5px 0%, 200% 0%, 0% 200%, 0% 5px);  
-        transition: background-color 0.2s ease !important;
-    }
 
-    .tabbrowser-tab:hover > .tab-stack:not([selected],[multiselected]) {
-        background-color: color-mix(in srgb, var(--general-color) 25%, transparent) !important;
+    /* used for smooth transition */
+    .tabbrowser-tab:not(:hover) > .tab-stack:not([selected], [multiselected]) {
         clip-path: polygon(5px 0%, 200% 0%, 0% 200%, 0% 5px);
         transition: background-color 0.2s ease !important;
     }
 
-/* Regla para visualizar mejor el seleccionar varias pestañas */
-    
+    .tabbrowser-tab:hover > .tab-stack:not([selected], [multiselected]) {
+        background-color: color-mix(
+            in srgb,
+            var(--general-color) 25%,
+            transparent
+        ) !important;
+        clip-path: polygon(5px 0%, 200% 0%, 0% 200%, 0% 5px);
+        transition: background-color 0.2s ease !important;
+    }
+
+    /* Regla para visualizar mejor el seleccionar varias pestañas */
+
     .tabbrowser-tab:is([multiselected]):not([selected]) .tab-stack {
         background: var(--button-hover-bgcolor) !important;
         clip-path: polygon(5px 0%, 200% 0%, 0% 200%, 0% 5px);
         outline-color: transparent !important;
         transition: background 0.2s ease !important; /* Smooth transition for background color */
     }
-    
+
     .tab-background[multiselected]:not([selected]) {
         background: transparent !important;
         outline-color: transparent !important;
@@ -147,28 +184,38 @@
 
 /* Botón "Open Newtab" */
 
-#tabs-newtab-button, #TabsToolbar #new-tab-button {
+#tabs-newtab-button,
+#TabsToolbar #new-tab-button {
     fill: var(--general-color) !important;
 }
 
-#TabsToolbar #tabs-newtab-button image:not(.menu-iconic-icon), #TabsToolbar #new-tab-button image:not(.menu-iconic-icon) {
+#TabsToolbar #tabs-newtab-button image:not(.menu-iconic-icon),
+#TabsToolbar #new-tab-button image:not(.menu-iconic-icon) {
     padding: 3px !important;
     max-height: 22px !important;
     min-height: 22px !important;
     max-width: 22px !important;
     min-width: 22px !important;
-    border-radius: 2px !important;
+    border-radius: 0px !important;
 }
 
-#tabs-newtab-button:hover .toolbarbutton-icon, #TabsToolbar #new-tab-button:hover .toolbarbutton-icon {
-    background: color-mix(in srgb, var(--general-color) 25%, transparent) !important;
+#tabs-newtab-button:hover .toolbarbutton-icon,
+#TabsToolbar #new-tab-button:hover .toolbarbutton-icon {
+    background: color-mix(
+        in srgb,
+        var(--general-color) 25%,
+        transparent
+    ) !important;
 }
 
 /* Medidas menores para scroll de pestañas */
 
-#tabbrowser-tabs { --uc-tabs-scrollbutton-border: 0px !important; }
+#tabbrowser-tabs {
+    --uc-tabs-scrollbutton-border: 0px !important;
+}
 
-#scrollbutton-up, #scrollbutton-down {
+#scrollbutton-up,
+#scrollbutton-down {
     border-block-width: var(--uc-tabs-scrollbutton-border, 0px) !important;
     margin-bottom: 1px !important;
 }
@@ -193,38 +240,51 @@
 
 /* Reduce spacing between pinned and regular tabs */
 
-#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
+    > #tabbrowser-arrowscrollbox
+    > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
     margin-inline-start: 0px !important;
 }
 
 /* Eliminar espacio de arrastre - izquierda */
 
 .titlebar-spacer[type="pre-tabs"] {
-    display: none !important
+    display: none !important;
 }
 
 /* Color y posición "dot" de pestaña que necesita atención */
 
-.tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged]:not([selected="true"]) {
-    background-image: radial-gradient(circle, var(--general-color), var(--general-color) 2px, transparent 2px) !important;
+.tabbrowser-tab
+    > .tab-stack
+    > .tab-content[pinned][titlechanged]:not([selected="true"]) {
+    background-image: radial-gradient(
+        circle,
+        var(--general-color),
+        var(--general-color) 2px,
+        transparent 2px
+    ) !important;
     background-position: center top calc(2px + var(--tabs-navbar-shadow-size)) !important;
 }
 
 /* Code to tabs-bar reach lower height that 30px */
 
-#titlebar{ appearance: none !important; }
+#titlebar {
+    appearance: none !important;
+}
 
-.titlebar-buttonbox-container, .tab-close-button, .tab-label-container{
-  max-height: var(--tab-height-personal) !important;
+.titlebar-buttonbox-container,
+.tab-close-button,
+.tab-label-container {
+    max-height: var(--tab-height-personal) !important;
 }
 
 /* My code - Borde redondeado barra de menú */
 
-#main-menubar>menu{
+#main-menubar > menu {
     background-color: transparent !important;
 }
 
-#main-menubar>menu>.menubar-text{
+#main-menubar > menu > .menubar-text {
     padding: 1px 4px 3px 4px !important;
     margin-block-start: 0px !important;
     margin-block-end: 1px !important;
@@ -232,14 +292,15 @@
 }
 
 @media (-moz-platform: linux) {
-#main-menubar>menu>.menubar-text{
-    margin-inline: -5px !important;
-    }}
+    #main-menubar > menu > .menubar-text {
+        margin-inline: -5px !important;
+    }
+}
 
-#main-menubar>menu:is(:hover,[open])>.menubar-text {
+#main-menubar > menu:is(:hover, [open]) > .menubar-text {
     background-color: var(--button-active-bgcolor) !important;
     color: white !important;
-    border-radius: 2px !important;
+    border-radius: 0px !important;
     width: -moz-available !important;
 }
 
@@ -250,12 +311,23 @@ toolbar:is(#TabsToolbar) #firefox-view-button {
 }
 
 toolbar:is(#TabsToolbar) #firefox-view-button:hover .toolbarbutton-icon {
-    background-color: color-mix(in srgb, var(--general-color) 25%, transparent) !important;
+    background-color: color-mix(
+        in srgb,
+        var(--general-color) 25%,
+        transparent
+    ) !important;
     fill: var(--general-color) !important;
 }
 
-:root:not([privatebrowsingmode="temporary"]) :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs, 
-:root[privatebrowsingmode="temporary"] :is(toolbarbutton:not(#firefox-view-button), toolbarpaletteitem:not(#wrapper-firefox-view-button)) + #tabbrowser-tabs {
+:root:not([privatebrowsingmode="temporary"])
+    :is(toolbarbutton, toolbarpaletteitem)
+    + #tabbrowser-tabs,
+:root[privatebrowsingmode="temporary"]
+    :is(
+        toolbarbutton:not(#firefox-view-button),
+        toolbarpaletteitem:not(#wrapper-firefox-view-button)
+    )
+    + #tabbrowser-tabs {
     border-inline-start: 0px solid transparent !important;
 }
 
@@ -266,7 +338,9 @@ toolbar:is(#TabsToolbar) #firefox-view-button .toolbarbutton-icon {
     padding: 4px !important;
 }
 
-toolbar:is(#TabsToolbar) #firefox-view-button[aria-pressed="true"] .toolbarbutton-icon {
+toolbar:is(#TabsToolbar)
+    #firefox-view-button[aria-pressed="true"]
+    .toolbarbutton-icon {
     outline-color: transparent !important;
     background: var(--button-hover-bgcolor) !important;
     fill: var(--arrowpanel-color, var(--lwt-tab-text)) !important;

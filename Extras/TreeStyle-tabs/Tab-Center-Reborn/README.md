@@ -1,6 +1,7 @@
 ## Tab Center Reborn [ [Link to extension](https://addons.mozilla.org/es/firefox/addon/tabcenter-reborn/) ].
 
 ### Steps to apply this config
+
 <ol>
   <li>Install the addon (link above).</li>
   <li>If you are not using <b><a href="https://github.com/Godiesc/opera-gx/tree/main/Extras/Left-SideBar">Left-sidebar Config</a></b> Create this preference in <b>about:config</b> page.</li>
@@ -11,6 +12,7 @@
 </ol>
 
 <b>Steps to do into the extension config:</b>
+
 <ul>
 <li>Go to about:addons in your URL bar, select Tab Center Reborn, go to Preferences and set:</li>
 <li>Animations: on.</li>

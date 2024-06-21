@@ -2,6 +2,7 @@
 [![es](https://img.shields.io/badge/lang-es-yellow.svg)](https://github.com/Godiesc/firefox-gx/blob/main/README.es.md)
 
 # Opera-GX Theme for Firefox Css
+
 <ul><li>A theme for Opera GX Skin Lovers. Complete compatibility with the stable version of the browser.</li></ul>
 
 ![animated22](https://github.com/Godiesc/firefox-gx/assets/22057609/175f63ec-f49b-45ef-aa8e-8c8114a83d2d)
@@ -9,6 +10,7 @@
 # How to install?
 
 <b>Steps to configure the theme:</b>
+
 <ol>
    <li>Download the theme from the <b> << Releases >> </b> section, in the right side of this page</code></li> 
    <li>Unzip the file and copy the 👉<code>chrome</code>👈 folder and the 👉<code>user.js</code>👈 file into your Firefox profile directory. </li>
@@ -22,6 +24,7 @@
 > <p>Notice:</p>⚠ The latest code updated in the repository (code > download zip) may work well only on beta or nightly versions.</p>
 
 # Themes
+
 <ul><li>Main Themes <a href= "https://addons.mozilla.org/es/firefox/addon/beautiful-opera-gx-fucsia/">🔴Fuchsia</a> <a href= "https://addons.mozilla.org/es/firefox/addon/beautiful-opera-gx-blue/">🔵Blue</a> <a href= "https://addons.mozilla.org/es/firefox/addon/beautiful-gx-green/" >🟢Green</a><a href= "https://addons.mozilla.org/es/firefox/addon/beautiful-poison/" >🖍 Poison</a> <a href= "https://addons.mozilla.org/es/firefox/addon/beautiful-swamp-in-autumn/" >🎑 Swamp</a><a href= "https://addons.mozilla.org/es/firefox/addon/beautiful-red-blur/">🌈Red-Blur</a><a href= "https://addons.mozilla.org/es/firefox/addon/beautiful-purple-sky/"> 🌆 Purple-Sky</a> </li>
 
 <li> Other Colors <a href= "https://addons.mozilla.org/es/firefox/addon/opera-gx-witchcraft-purple/">💜Purple</a> <a href= "https://addons.mozilla.org/es/firefox/addon/opera-gx-electric-aquamarine/">💚Aquamarine</a> <a href= "https://addons.mozilla.org/es/firefox/addon/opera-gx-ember-orange/">🦧Orange</a> <a href= "https://addons.mozilla.org/es/firefox/addon/opera-gx-frozen-cyan/">💠Cyan</a> <a href= "https://addons.mozilla.org/es/firefox/addon/opera-gx-level-up-green/">🍏GreenLight</a> <a href= "https://addons.mozilla.org/es/firefox/addon/opera-gx-stamina-yellow/">💛Yellow</a> <a href= "https://addons.mozilla.org/es/firefox/addon/opera-gx-wizard-grey/"> 🗻Gray</a></li>
@@ -41,6 +44,7 @@
 <li> Go to "Advanced colors" tab and change the color in "icons attention", this color will set the accent color to the theme.</li></ol>
 
 # Extras
+
 <p>Into the "Extras" folder you will find the next features.</p>
 <ul><li><a href="https://github.com/Godiesc/firefox-gx/tree/main/Extras/OneLine"><b>OneLine</b></a> - The tabs-bar will be next to the navbar.</li>
 <li><a href="https://github.com/Godiesc/firefox-gx/tree/main/Extras/Tab-Shapes"><b>Tab Shapes</b></a> - Give the tabs other style.</li>
@@ -55,6 +59,7 @@
 # Customize
 
 <b><i>Various customizations</i></b>
+
 <ul>
 <li><p>The file <code>chrome/components/ogx_root-personal.css</code> contains very useful and easy to use variables, so it is easier to change:</p>
 <ul>
@@ -66,17 +71,20 @@
 <p>Every variable has a description on the right, so you know what to customize without breaking the file.</p></li></ul>
 
 <b><i>NewTab Wallpaper</i></b>
+
 <ul>
    <li><p>(Option 1) In the directory: <code>chrome/newtab</code> there are 12 wallpapers (6 for dark theme and 6 for light theme), those images will display in the NewTab options for you to choose, you could rename the images you want with those names and the theme will display them, you can add your own images. You can find more images in: <a href="https://imgur.com/a/j78IhJN"><b>This Gallery</b></a>.</p></li>
 <li><p>(Option 2) Editing the code <code>chrome/components/ogx_root-personal.css</code> lines from <code>18</code> to <code>31</code>. With this method you can change too the accent color for each wallpaper.<p></li></ul></br>
 
 <b><i>Other 'about' pages Wallpaper</i></b>
+
 <ul>
    <li><p> For default the wallpaper selected is <code>wallpaper-dark1.png</code> and <code>wallpaper-light1.png</code> In the directory: <code>chrome/newtab</code>, you could rename the image you want with those names and the theme will display them in those pages, you can change the names in the <code>chrome/components/ogx_root-personal.css</code> file in the line <code>35</code> and the line <code>40</code> to the image you want.</p>
    </li>
 </ul>
 
 <b><i>Accent Color</i></b>
+
 <ul>
 <li><p>Editing the code <code>chrome/components/ogx_root-personal.css</code> lines from <code>18</code> to <code>31</code> you can change the accent color for each wallpaper for NewTab page. For the other pages (new-tab without wallpaper, preferences and add-ons pages) The <code>chrome/components/ogx_root-personal.css</code> file has the variable: <code>--general-color</code> to set the color, you could choose whatever you like. 💙💚💜🤎💛🧡❤ <b>Restarting the browser is required. </b></p></li></ul>
 
@@ -96,6 +104,7 @@
 </ul>
 
 # Known Issues
+
 <ul>
 <li>In themes with images, when moving a tab it will display a bad background.</li>
 <li>Not compatibility for RTL(right-to-left) languages.</li>
